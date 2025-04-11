@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { GripIcon } from "./grip-icon";
-import { MotionDiv } from "./motion-component";
 import { cn } from "@/lib/utils";
 import { useAnimate } from "motion/react";
 
