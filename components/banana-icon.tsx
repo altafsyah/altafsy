@@ -36,7 +36,10 @@ const Variants: Variants = {
 };
 
 const BananaIcon = forwardRef<BananaIconHandle, BananaIconProps>(
-  ({ onMouseEnter, onMouseLeave, className, size = 28, ...props }, ref) => {
+  (
+    { onMouseEnter, onMouseLeave, className = "", size = 28, ...props },
+    ref
+  ) => {
     const controls = useAnimation();
     const isControlledRef = useRef(false);
 
