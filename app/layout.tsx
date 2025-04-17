@@ -1,12 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Plus_Jakarta_Sans } from "next/font/google";
+import { Geist } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import Link from "next/link";
-
-const plusJakartaSans = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-});
 
 const geistSans = Geist({
   subsets: ["latin-ext"],
