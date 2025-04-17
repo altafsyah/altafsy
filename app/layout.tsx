@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
+import Link from "next/link";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const geistSans = Geist({
+  subsets: ["latin-ext"],
 });
 
 export const metadata: Metadata = {
@@ -26,48 +25,48 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col relative`}
+        className={`${geistSans.className} antialiased min-h-screen flex flex-col relative`}
       >
         <Navbar />
-        {/* <nav className="p-5 flex items-center justify-end">
-          <button className="w-10 h-10 rounded bg-white/20 relative">
-            <GripIcon className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
-          </button>
-        </nav> */}
         <main className="max-w-xl p-5 w-full mx-auto h-full flex-2/4">
           {children}
         </main>
-        <footer className="h-40 p-5">
-          <h2>Also me</h2>
+        <footer className="max-w-xl xl:max-w-none h-40 p-5 xl:fixed bottom-0 left-0 mx-auto xl:mx-0 w-full">
+          <h2 className="font-medium text-lg">Also me</h2>
           <ul className="mt-1 text-sm">
             <li>
               <p>
                 <span className="w-20 inline-block">Mail</span>
-                <a className="ml-16">syahrastanialtaf@gmail.com</a>
+                <Link
+                  href="mailto:syahrastanialtaf@gmail.com"
+                  className="ml-10 cursor-pointer hover:underline underline-offset-2"
+                >
+                  syahrastanialtaf@gmail.com
+                </Link>
               </p>
             </li>
             <li>
               <p>
                 <span className="w-20 inline-block">Twitter</span>
-                <a className="ml-16">@altafsyh_</a>
-              </p>
-            </li>
-            <li>
-              <p>
-                <span className="w-20 inline-block">Dribble</span>
-                <a className="ml-16">@altafsyh_</a>
-              </p>
-            </li>
-            <li>
-              <p>
-                <span className="w-20 inline-block">Medium</span>
-                <a className="ml-16">@altafsyh_</a>
+                <Link
+                  href="https://x.com/altafsyh_"
+                  target="_blank"
+                  className="ml-10 cursor-pointer hover:underline underline-offset-2"
+                >
+                  @altafsyh_
+                </Link>
               </p>
             </li>
             <li>
               <p>
                 <span className="w-20 inline-block">Fenulis</span>
-                <a className="ml-16">@tanee</a>
+                <Link
+                  href="https://www.fenulis.com/tanee"
+                  target="_blank"
+                  className="ml-10 cursor-pointer hover:underline underline-offset-2"
+                >
+                  @tanee
+                </Link>
               </p>
             </li>
           </ul>

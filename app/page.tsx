@@ -1,6 +1,7 @@
 import IdCardIcon from "@/components/id-card-icon";
 import { cn } from "@/lib/utils";
 import { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -12,10 +13,17 @@ export default function Home() {
   return (
     <>
       <section id="hero__section" className="flex gap-3 items-center">
-        <div className="w-14 aspect-square rounded-lg shrink-0 bg-red-300"></div>
+        <div className="w-20 aspect-square rounded-lg shrink-0 relative overflow-hidden border border-white/30">
+          <Image
+            src="/altaf.png"
+            alt="Altaf in person"
+            fill
+            className="w-full h-full object-cover object-top"
+          />
+        </div>
         <div>
-          <h1>Altaf Syahrastani</h1>
-          <p className="text-sm">
+          <h1 className="font-medium text-xl">Altaf Syahrastani</h1>
+          <p>
             Frontend Developer @{" "}
             <Link
               href="https://technopartner.id/"
@@ -28,7 +36,7 @@ export default function Home() {
         </div>
       </section>
       <section className="mt-10">
-        <h2>Profile</h2>
+        <h2 className="font-medium text-lg">Profile</h2>
         <p className="mt-1 text-sm">
           Call me Al, a frontend developer based on Yogyakarta. Currently
           I&apos;m working as Frontend Developer for{" "}
@@ -43,7 +51,7 @@ export default function Home() {
         </p>
       </section>
       <section className="mt-10">
-        <h2>Projects</h2>
+        <h2 className="font-medium text-lg">Projects</h2>
         <p className="mt-1 text-sm">
           I love build and want to explore into product things.
         </p>
@@ -52,7 +60,7 @@ export default function Home() {
             className={cn(
               "w-3/4 h-40 rounded-xl p-3 bg-gray-800/70 border border-white/20",
               "flex flex-col justify-between gap-5",
-              "hover:scale-[1.015] transition-transform"
+              "hover:scale-[1.015] transition-transform relative"
             )}
           >
             <div>
@@ -64,10 +72,10 @@ export default function Home() {
                 href="/"
                 className="bg-white/10 border border-white/10 rounded-sm px-2 py-1"
               >
-                View Project
+                Coming Soon
               </Link>
               <div className="flex">
-                <Link href="/">Coming Soon</Link>
+                <span>Coming Soon</span>
               </div>
             </div>
           </div>
@@ -75,7 +83,7 @@ export default function Home() {
         </div>
       </section>
       <section className="mt-10">
-        <h2>Works</h2>
+        <h2 className="font-medium text-lg">Works</h2>
         <ul className="mt-3 flex flex-col gap-2">
           <li
             className={cn(
@@ -96,7 +104,7 @@ export default function Home() {
             </div>
             <div className="text-sm">
               <h3>Frontend Developer @ Technopartner</h3>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+              <p>Responsible to build and develop app for company client.</p>
             </div>
           </li>
           <li
@@ -118,13 +126,16 @@ export default function Home() {
             </div>
             <div className="text-sm">
               <h3>Freelance Software Developer</h3>
-              <p>I&apos;m open to collaborate</p>
+              <p>
+                I&apos;m open to collaborate to boost up your business with
+                digitalisation.
+              </p>
             </div>
           </li>
         </ul>
       </section>
       <section className="mt-10">
-        <h2>Writings</h2>
+        <h2 className="font-medium text-lg">Writings</h2>
         <p className="text-sm mt-1">
           I spent my idle hours on my hobbies, and writings is one of them. I do
           write some blog that some of them published on{" "}
@@ -137,34 +148,18 @@ export default function Home() {
           </Link>{" "}
           and this website as well.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-5">
+        <div className="mt-5">
           <Link
             href="/"
             className={cn(
-              "border border-white/20 p-3 rounded-lg",
+              "border border-white/20 p-3 rounded-lg block",
               "hover:scale-[1.015] hover:bg-gray-800/80 transition-all group"
             )}
           >
-            <h3>The Emotion That Feels Like Static</h3>
+            <h3>Mundane Life That&apos;s Just, Fine.</h3>
             <p className="text-sm line-clamp-2 text-gray-400 group-hover:text-white transition-colors">
               I told my therapist I&apos;ve been fine with feeling nothing. She
               didn&apos;t look convinced. To be honest, neither was I.
-            </p>
-          </Link>
-          <Link
-            href="/"
-            className={cn(
-              "border border-white/20 p-3 rounded-lg",
-              "hover:scale-[1.015] hover:bg-gray-800/80 transition-all group"
-            )}
-          >
-            <h3>The City Taught Me How Much I Loved the Quiet Moments</h3>
-            <p className="text-sm line-clamp-2 text-gray-400 group-hover:text-white transition-colors">
-              I remember coming home from work, tired but content, and sitting
-              down for dinner with my parents in our small living room. We
-              didn’t talk much—just casual small talk over the background noise
-              of a TV show none of us was watching. It wasn’t anything special,
-              but it was warm.
             </p>
           </Link>
         </div>

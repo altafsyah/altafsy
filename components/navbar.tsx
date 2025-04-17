@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { GripIcon } from "./grip-icon";
 import { cn } from "@/lib/utils";
 import { useAnimate } from "motion/react";
+import Link from "next/link";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,8 +22,9 @@ export const Navbar = () => {
       },
       {
         type: "spring",
-        stiffness: 300,
-        damping: 30,
+        stiffness: 150,
+        damping: 10,
+        duration: 250,
       }
     );
 
@@ -60,11 +62,32 @@ export const Navbar = () => {
         </button>
         {isOpen && (
           <div>
-            <p>Pages</p>
-            <ul className="mt-2">
-              <li className="bg-gray-400 px-3 py-1">Home</li>
-              <li>About</li>
-              <li>Now</li>
+            <p className="px-6 text-sm">Pages</p>
+            <ul className="mt-1 mx-3">
+              <li
+                className="hover:bg-gray-400 px-3 py-0.5 rounded link"
+                onClick={() => setIsOpen(false)}
+              >
+                <Link href="/" className="block">
+                  Home
+                </Link>
+              </li>
+              <li
+                className="hover:bg-gray-400 px-3 py-0.5 rounded link"
+                onClick={() => setIsOpen(false)}
+              >
+                <Link href="/about" className="block">
+                  About
+                </Link>
+              </li>
+              <li
+                className="hover:bg-gray-400 px-3 py-0.5 rounded link"
+                onClick={() => setIsOpen(false)}
+              >
+                <Link href="now" className="block">
+                  Now
+                </Link>
+              </li>
             </ul>
           </div>
         )}
