@@ -5,6 +5,8 @@ import { GripIcon } from "./grip-icon";
 import { cn } from "@/lib/utils";
 import { useAnimate } from "motion/react";
 import Link from "next/link";
+import { EarthIcon } from "./earth-icon";
+import { BananaIcon } from "./banana-icon";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -54,42 +56,86 @@ export const Navbar = () => {
       <div
         ref={scopeButton}
         className={cn(
-          "rounded w-10 h-10 right-5 top-5 z-50 border border-white/20 bg-gray-500 absolute"
+          "rounded w-10 h-10 right-5 top-5 z-50 border border-white/30 shadow shadow-white/20 bg-black/40 absolute"
         )}
       >
         <button onClick={() => setIsOpen(!isOpen)}>
-          <GripIcon className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+          <GripIcon
+            className={cn(
+              "absolute",
+              isOpen
+                ? "top-1 right-1"
+                : "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            )}
+          />
         </button>
         {isOpen && (
-          <div>
-            <p className="px-6 text-sm">Pages</p>
-            <ul className="mt-1 mx-3">
-              <li
-                className="hover:bg-gray-400 px-3 py-0.5 rounded link"
-                onClick={() => setIsOpen(false)}
-              >
-                <Link href="/" className="block">
-                  Home
-                </Link>
-              </li>
-              <li
-                className="hover:bg-gray-400 px-3 py-0.5 rounded link"
-                onClick={() => setIsOpen(false)}
-              >
-                <Link href="/about" className="block">
-                  About
-                </Link>
-              </li>
-              <li
-                className="hover:bg-gray-400 px-3 py-0.5 rounded link"
-                onClick={() => setIsOpen(false)}
-              >
-                <Link href="now" className="block">
-                  Now
-                </Link>
-              </li>
-            </ul>
-          </div>
+          <section className="mt-5">
+            <div>
+              <p className="px-6 text-xs text-gray-300">Pages</p>
+              <ul className="mt-1 mx-3 text-sm">
+                <li
+                  className="hover:bg-white/30 rounded link"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <Link href="/" className="flex items-center">
+                    <EarthIcon size={18} />
+                    <span>Home</span>
+                  </Link>
+                </li>
+                <li
+                  className="hover:bg-white/30 rounded link"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <Link href="/about" className="flex items-center">
+                    <BananaIcon size={18} />
+                    <span>About</span>
+                  </Link>
+                </li>
+                <li
+                  className="hover:bg-white/30 rounded link"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <Link href="now" className="flex items-center">
+                    <BananaIcon size={18} />
+                    <span>Writings</span>
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div className="mt-5">
+              <p className="px-6 text-xs text-gray-300">Me</p>
+              <ul className="mt-1 mx-3 text-sm">
+                <li
+                  className="hover:bg-white/30 rounded link"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <Link href="/" className="flex items-center">
+                    <EarthIcon size={18} />
+                    <span>Goods</span>
+                  </Link>
+                </li>
+                <li
+                  className="hover:bg-white/30 rounded link"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <Link href="/about" className="flex items-center">
+                    <BananaIcon size={18} />
+                    <span>Uses</span>
+                  </Link>
+                </li>
+                <li
+                  className="hover:bg-white/30 rounded link"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <Link href="now" className="flex items-center">
+                    <BananaIcon size={18} />
+                    <span>Now</span>
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </section>
         )}
       </div>
     </nav>

@@ -9,9 +9,9 @@ export default function About() {
           clients project.
         </p>
         <div className="grid grid-cols-2 md:grid-cols-2 gap-3 mt-5">
-          <div className="row-span-2 bg-gray-300 rounded-lg min-h-20 md:min-h-40"></div>
-          <div className="bg-gray-300 w-full h-20 md:h-40 rounded-lg"></div>
-          <div className="bg-gray-300 w-full h-20 md:h-40 rounded-lg"></div>
+          <div className="row-span-2 bg-gray-300 rounded-lg min-h-32 md:min-h-40"></div>
+          <div className="bg-gray-300 w-full h-32 md:h-40 rounded-lg"></div>
+          <div className="bg-gray-300 w-full h-32 md:h-40 rounded-lg"></div>
         </div>
       </section>
       <section className="mt-10">
