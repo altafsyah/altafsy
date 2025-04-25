@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function About() {
   return (
     <>
@@ -8,24 +10,16 @@ export default function About() {
           working both web and mobile apps at Technoparter Indonesia to handle
           clients project.
         </p>
-        <div className="grid grid-cols-2 md:grid-cols-2 gap-3 mt-5">
-          <div className="row-span-2 bg-gray-300 rounded-lg min-h-32 md:min-h-40"></div>
-          <div className="bg-gray-300 w-full h-32 md:h-40 rounded-lg"></div>
-          <div className="bg-gray-300 w-full h-32 md:h-40 rounded-lg"></div>
-        </div>
-      </section>
-      <section className="mt-10">
-        <h2 className="font-medium text-lg">Process</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum,
-          culpa? Dolore, quod culpa porro quam quis dicta veritatis quaerat et!
-        </p>
       </section>
       <section className="mt-10">
         <h2 className="font-medium text-lg">Expertise</h2>
         <p>
-          I've been developer since 2021 and since then I've been working on
-          many apps.
+          I've been working as a software developer since 2021 and since then
+          I've been working on many apps. For detail of my works, please kindly
+          send me an email at{" "}
+          <Link href="mailto:syahrastanialtaf@gmail.com" className="underline underline-offset-4">
+            here.
+          </Link>
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-5">
           <div className="border border-white/30 rounded-lg p-3">
@@ -59,14 +53,14 @@ export default function About() {
           tasks. Since then, I'm diving more into product world.
         </p>
       </section>
-      <section className="mt-10">
+      {/* <section className="mt-10">
         <h2 className="font-medium text-lg">Additional</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
           dicta amet voluptatum ea nesciunt, natus adipisci excepturi autem
           consequuntur quaerat nulla exercitationem, velit aspernatur similique?
         </p>
-      </section>
+      </section> */}
     </>
   );
 }

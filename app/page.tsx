@@ -148,7 +148,7 @@ export default function Home() {
           </Link>{" "}
           and this website as well.
         </p>
-        <div className="mt-5">
+        {/* <div className="mt-5">
           <Link
             href="/"
             className={cn(
@@ -162,7 +162,7 @@ export default function Home() {
               didn&apos;t look convinced. To be honest, neither was I.
             </p>
           </Link>
-        </div>
+        </div> */}
       </section>
     </>
   );

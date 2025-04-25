@@ -96,7 +96,7 @@ export const Navbar = () => {
                   className="hover:bg-white/30 rounded link"
                   onClick={() => setIsOpen(false)}
                 >
-                  <Link href="now" className="flex items-center">
+                  <Link href="writings" className="flex items-center">
                     <BananaIcon size={18} />
                     <span>Writings</span>
                   </Link>
@@ -110,7 +110,7 @@ export const Navbar = () => {
                   className="hover:bg-white/30 rounded link"
                   onClick={() => setIsOpen(false)}
                 >
-                  <Link href="/" className="flex items-center">
+                  <Link href="books" className="flex items-center">
                     <EarthIcon size={18} />
                     <span>Goods</span>
                   </Link>
@@ -119,7 +119,7 @@ export const Navbar = () => {
                   className="hover:bg-white/30 rounded link"
                   onClick={() => setIsOpen(false)}
                 >
-                  <Link href="/about" className="flex items-center">
+                  <Link href="uses" className="flex items-center">
                     <BananaIcon size={18} />
                     <span>Uses</span>
                   </Link>
